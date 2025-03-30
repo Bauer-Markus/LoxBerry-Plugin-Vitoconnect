@@ -682,6 +682,18 @@ function Viessmann_SetData( $Parameter, $Value, $apiversion ){
 			$url = $url.$Parameter."/commands/setTemperature";
 			$PostData = "{\"targetTemperature\":".$Value."}";
 			break;
+		case "heating.circuits.0.operating.programs.eco.activate":
+			$url = $url.$Parameter."/commands/activate";
+			break;
+		case "heating.circuits.0.operating.programs.eco.deactivate":
+			$url = $url.$Parameter."/commands/deactivate";
+			break;
+		case "heating.circuits.0.operating.programs.comfort.activate":
+			$url = $url.$Parameter."/commands/activate";
+			break;
+		case "heating.circuits.0.operating.programs.comfort.deactivate":
+			$url = $url.$Parameter."/commands/deactivate";
+			break;
 		case "heating.dhw.oneTimeCharge":
 			if($Value == "start"){
 				$url = $url.$Parameter."/commands/activate";
